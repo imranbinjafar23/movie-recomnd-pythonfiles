@@ -1,0 +1,15 @@
+Introduction
+The code is for creating a movie recommendation system based on the similarity of movies. The system uses a dataset of 5000 movies and their associated credits and tags. It also uses natural language processing techniques to extract relevant features from the movie descriptions and credits, and then applies cosine similarity to recommend similar movies.
+
+Loading and Preprocessing Data
+The first part of the code involves loading the movie and credits data, merging them, and selecting relevant columns. The code then drops any rows with missing values. The convert, convert3, and fetch_director functions are defined and applied to the genres, keywords, and crew columns, respectively. These functions extract relevant information from these columns and convert them into lists.
+
+The overview column is split into words, and the genres, keywords, cast, and crew columns are cleaned to remove spaces. The tag column is then created by concatenating these columns. The tag column is further preprocessed by joining the words, converting them to lowercase, and stemming them using the Porter stemmer. Finally, the tag column is vectorized using the CountVectorizer, which creates a matrix of word frequencies.
+
+Calculating Similarity
+The similarity matrix is calculated using the cosine similarity method. The recommend function takes a movie as input and returns a list of the top 5 movies that are most similar to it based on the similarity matrix.
+
+Saving the Model
+The final part of the code saves the preprocessed data and the similarity matrix as pickle files for future use.
+
+Overall, the code creates a movie recommendation system based on natural language processing and cosine similarity techniques.
